@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SWM details</title>
+
+</head>
+<body>
+<h1>{{ swm.agent_name }}</h1>
+<ul>
+    {% for fragment in swm.swmfragment_set.all %}
+    <li><a href="{% url 'causnet:fragment' fragment.id%}">{{ fragment.id }}</a></li>
+
+    {% endfor %}
+</ul>
+
+</body>
+</html>

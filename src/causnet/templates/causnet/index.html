@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign World model: saved</title>
+</head>
+<body>
+{% if all_swms %}
+<ul>
+    {% for swm in all_swms %}
+    <li><a href="{% url 'causnet:detail' swm.id%}">{{ swm.agent_name }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No SWMs are available.</p>
+{% endif %}
+</body>
+</html>
